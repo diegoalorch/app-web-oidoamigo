@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+body {
+    background: rgb(238, 238, 238);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*--------------------------------------------------------------------*/
+
+
+/*          ESTILOS DEL FORMULARIO DEL LOGIN          */
+
+.pantalla {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    background: #f2f2f2;
+}
+
+.login-formulario {
+    width: 390px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 80px 35px 35px 35px;
+    -webkit-box-shadow: 0 5px 10px 0px rgb(0 0 0 / 40%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: block;
+}
+
+.formulario-form-titulo {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.p-b-26 {
+    padding-bottom: 26px;
+}
+
+.contenedorlogo {
+    width: 160px;
+    height: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.logologin {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*          FIN DEL FORMULARIO DEL LOGIN          */
+
+
+/*--------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------*/
+
+
+/*          ESTILOS DEL BOTON DE CARGA         */
+
+.button {
+    position: absolute;
+    top: 48.5%;
+    left: 50%;
+    transform: translate(-50%, 240%);
+    height: 65px;
+    width: 300px;
+    background: #109e92;
+    border-radius: 55px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow: hidden;
+}
+
+.button.active {
+    height: 10px;
+    width: 320px;
+    top: 548.5px;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: #00443e;
+    border-radius: 55px;
+    transition: all 3s ease-in-out;
+}
+
+.button.active::before {
+    animation: layer 2.5s ease-in-out forwards;
+}
+
+@keyframes layer {
+    100% {
+        left: 0%;
+    }
+}
+
+.button .content {
+    height: 100%;
+    width: 100%;
+    top: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    transition-delay: 0.2s;
+}
+
+.button.active .content {
+    transform: translateY(60px);
+}
+
+.button .content i,
+.button .content .button-text {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.button .content .button-text {
+    font-size: 28px;
+    margin-left: 8px;
+}
+
+
+/*          FIN DEL BOTON DE CARGA          */
+
+
+/*--------------------------------------------------------------------*/
+
+.input-box {
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+
+.underline::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    left: 0;
+    bottom: 0;
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, #00443e 0%, #109e92 100%);
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus~.underline::after,
+.input-box input:valid~.underline::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.input-box input[type="submit"] {
+    background: linear-gradient(to right, #00443e 0%, #109e92 100%);
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-box input[type="submit"]:hover {
+    letter-spacing: 1px;
+    background: linear-gradient(to left, #00443e 0%, #109e92 100%);
+}
