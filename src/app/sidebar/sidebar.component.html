@@ -7,55 +7,55 @@
         <i class='bx bx-menu' id="btn"></i>
     </div>
     <ul class="nav-list">
-        <li>
+        <!-- <li>
             <i class='bx bx-search'></i>
             <input type="text" placeholder="Search...">
             <span class="tooltip">Search</span>
-        </li>
-        <li>
-            <a href="#">
+        </li> -->
+        <li class="cursor-click" [routerLink]="[ '/sidebar/agregar-psicologo' ]">
+            <a>
                 <i class='bx bx-grid-alt'></i>
                 <span class="links_name">Agregar Psicólogo</span>
             </a>
             <span class="tooltip">Agregar Psicólogo</span>
         </li>
-        <li>
-            <a href="#">
+        <li class="cursor-click" [routerLink]="[ '/sidebar/lista-psicologos' ]">
+            <a>
                 <i class='bx bx-user'></i>
                 <span class="links_name">Lista de Psicólogo</span>
             </a>
             <span class="tooltip">Lista de Psicólogo</span>
         </li>
-        <li>
-            <a href="#">
+        <li class="cursor-click" [routerLink]="[ '/sidebar/lista-pacientes' ]">
+            <a>
                 <i class='bx bx-chat'></i>
                 <span class="links_name">Lista de Pacientes</span>
             </a>
             <span class="tooltip">Lista de Pacientes</span>
         </li>
-        <li>
-            <a href="#">
+        <li class="cursor-click" [routerLink]="[ '/sidebar/reporte-paciente' ]">
+            <a>
                 <i class='bx bx-pie-chart-alt-2'></i>
                 <span class="links_name">Reporte de Pacientes</span>
             </a>
             <span class="tooltip">Reporte de Pacientes</span>
         </li>
-        <li>
-            <a href="#">
+        <li class="cursor-click" [routerLink]="[ '/sidebar/paciente-asignado' ]">
+            <a>
                 <i class='bx bx-folder'></i>
                 <span class="links_name">Paciente Asiganado</span>
             </a>
             <span class="tooltip">Paciente Asiganado</span>
         </li>
 
-        <li>
-            <a href="#">
+        <li class="cursor-click" [routerLink]="[ '/sidebar/configuracion' ]">
+            <a>
                 <i class='bx bx-cog'></i>
                 <span class="links_name">Configuración</span>
             </a>
             <span class="tooltip">Configuración</span>
         </li>
-        <li class="profile">
+        <li class="cursor-click" class="profile">
             <div class="profile-details">
                 <img src="../../assets/img/profile.jpg" alt="profileImg">
                 <div class="name_job">
@@ -70,9 +70,11 @@
         </li>
     </ul>
 </div>
-<section class="home-section">
-    <div class="text">Agregar Psicólogo</div>
-</section>
-<section class="listapsicologos">
-    <div class="texto">Lista de Psicólogos</div>
-</section>
+
+<body class="home_content">
+    <div id="caja">
+        <div id="contenedor">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</body>

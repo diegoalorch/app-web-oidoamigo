@@ -253,7 +253,7 @@
 }
 
 .sidebar.open .profile #log_out {
-    width: 50px;
+    width: 60px;
     background: none;
 }
 
@@ -285,4 +285,48 @@
     .sidebar li .tooltip {
         display: none;
     }
+}
+
+.home_content {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 85px);
+    left: 85px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2px);
+    transition: all 0.5s ease;
+}
+
+.sidebar.open~.home_content {
+    z-index: 100;
+}
+
+.home_content .text {
+    font-size: 25px;
+    font-weight: 500;
+    color: #9c254d;
+    margin: 12px;
+}
+
+.sidebar.open~.home_content {
+    width: calc(100% - 260px);
+    left: 260px;
+    transition: all 0.5s ease;
+}
+
+#caja {
+    margin-top: 8px;
+    width: 99.5%;
+    height: 98%;
+    border: 2px solid #00443e;
+    border-radius: 20px;
+}
+
+#contenedor {
+    margin: auto;
+    margin-top: 8px;
+    width: 99%;
+}
+
+.cursor-click {
+    cursor: pointer;
 }
