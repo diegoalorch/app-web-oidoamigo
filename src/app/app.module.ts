@@ -16,7 +16,8 @@ import { AgregarPsicologoComponent } from './components/agregar-psicologo/agrega
 import { ListaPsicologosComponent } from './components/lista-psicologos/lista-psicologos.component';
 import { ListaPacientesComponent } from './components/lista-pacientes/lista-pacientes.component';
 import { ReportePacientesComponent } from './components/reporte-pacientes/reporte-pacientes.component';
-import { ConfiguracionComponent } from './components/configuracion/configuracion.component'
+import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
+import { IonicModule } from '@ionic/angular'
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ConfiguracionComponent } from './components/configuracion/configuracion
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    IonicModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
