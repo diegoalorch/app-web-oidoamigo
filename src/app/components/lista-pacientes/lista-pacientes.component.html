@@ -1,1 +1,300 @@
-<p>lista-pacientes works!</p>
+<div class="todo">
+    <div class="lista1">
+        <div class="paasig">
+            <b class="estilos1">Pacientes No Asignados</b>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col" class="tabla2">Ver</th>
+                    <th scope="col" class="tabla2">Asignar</th>
+                    <th scope="col" class="tabla2">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let paci of listar_pacientes | paginate: {itemsPerPage: 6, currentPage: p, id: 'paginate1'}; let i=index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{paci.nombres}}</td>
+                    <td>{{paci.apellidos}}</td>
+                    <td>{{paci.telefono}}</td>
+                    <td class="tabla2">
+                        <ion-icon name="eye-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="listar_datos_paciente(paci.idpaciente)" data-bs-toggle="modal" data-bs-target="#exampleModal"></ion-icon>
+                        <!---->
+                    </td>
+                    <td class="tabla2">
+                        <ion-icon name="school-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="listar_datos_paciente2(paci.idpaciente)" data-bs-toggle="modal" data-bs-target="#exampleModal1"></ion-icon>
+                    </td>
+                    <td class="tabla2">
+                        <ion-icon name="trash-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="eliminarConsulta(paci)"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Siguiente" id="paginate1" style="text-align: center;"></pagination-controls>
+
+        <!-- MODAL 1 -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="exampleModalLabel">Datos del Paciente</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+                    </div>
+                    <div class="modal-body" *ngFor="let l of listar_datos">
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Nombres Completos</label>
+                                <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="l.nombres" name="nombre" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Apellidos Completos</label>
+                                <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="l.apellidos" name="apellido" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Número de Celular</label>
+                                <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="l.telefono" name="telefonos" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Pais</label>
+                                <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="l.pais" name="paises" disabled>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Consulta</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="l.motivoconsulta" name="consulta" disabled></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODARL 2  -->
+
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="exampleModalLabel">Asignación de un Psicólogo para atención al Paciente</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+                    </div>
+                    <div class="modal-body" *ngFor="let l2 of listar_datos2">
+                        <form class="row g-3">
+                            <h4>Datos del Paciente</h4>
+                            <div class="col-md-12">
+                                <label for="inputEmail4" class="form-label">Nombres y Apellidos del Paciente</label>
+                                <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="l2.nombres" name="nombress" disabled>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="inputPassword4" class="form-label">Consulta del Paciente</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="l2.motivoconsulta" name="consultas" disabled></textarea>
+                            </div>
+
+
+                            <h4>Datos del Psicologo</h4>
+
+                            <div class="col-md-12">
+                                <label for="inputPassword4" class="form-label">Escoja un Psicólogo</label>
+                                <select id="inputState" class="form-select" [(ngModel)]="autoSelect" name="select-psicologo" (ngModelChange)="mostrardatospsicologo($event)">
+                            <option value="-1" disabled>Seleccione un Psicólogo para el Paciente</option>
+                            <option [value]="psicologo.idpsicologo" *ngFor="let psicologo of psico">{{psicologo.nombres}} {{psicologo.apellidos}}</option>
+                          </select>
+                            </div>
+                        </form>
+                        <div class="modal-body" *ngFor="let psic of mostrar_psicologo">
+                            <form class="row g-3">
+                                <div class="col-md-3">
+                                    <label for="inputPassword4" class="form-label">Nombres del Psicologo</label>
+                                    <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="psic.nombres" name="nombresss" disabled>
+                                </div>
+                                <div class="col-4">
+                                    <label for="inputAddress" class="form-label">Apellidos del Psicologo</label>
+                                    <input type="text" class="form-control" id="inputAddress" [(ngModel)]="psic.apellidos" name="apellidos" disabled>
+                                </div>
+                                <div class="col-5">
+                                    <label for="inputAddress" class="form-label">Apellidos del Psicologo</label>
+                                    <input type="text" class="form-control" id="inputAddress" [(ngModel)]="psic.correo" name="correo" disabled>
+                                </div>
+                                <div class="col-8">
+                                    <label for="inputAddress" class="form-label">Universidad de Estudio</label>
+                                    <input type="text" class="form-control" id="inputAddress" [(ngModel)]="psic.universidad" name="universidad" disabled>
+                                </div>
+                                <div class="col-4">
+                                    <label for="inputAddress" class="form-label">Grado Academico</label>
+                                    <input type="text" class="form-control" id="inputAddress" [(ngModel)]="psic.gradoacademico" name="gradoacademico" disabled>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="derivarPaciente()">Guardar Asignación</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *********************************** -->
+    <div class="lista2">
+        <div class="paasig">
+            <b class="estilos1">Pacientes Asignados</b>
+        </div>
+
+        <div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col" class="tabla2">Ver</th>
+                        <th scope="col" class="tabla2">Derivar</th>
+                        <th scope="col" class="tabla2">Designar</th>
+                        <th scope="col" class="tabla2">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let asignados of asignados_pacientes | paginate: {itemsPerPage: 6, currentPage: p2, id: 'paginate2'}; let i=index">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{asignados.nombres}}</td>
+                        <td>{{asignados.apellidos}}</td>
+                        <td>{{asignados.telefono}}</td>
+                        <td class="tabla2">
+                            <ion-icon name="eye-outline" style="cursor: pointer; color: brown; font-size: 25px;" data-bs-toggle="modal" data-bs-target="#exampleModal2" (click)="mostraPaciente2(asignados.idpaciente)"></ion-icon>
+                        </td>
+                        <td class="tabla2">
+                            <ion-icon name="school-outline" style="cursor: pointer; color: brown; font-size: 25px;" data-bs-toggle="modal" data-bs-target="#exampleModal3"></ion-icon>
+                        </td>
+                        <td class="tabla2">
+                            <ion-icon name="create-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="designarPaciente(asignados.idpaciente)"></ion-icon>
+                        </td>
+                        <td class="tabla2">
+                            <ion-icon name="trash-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="eliminarConsulta(asignados)"></ion-icon>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <pagination-controls (pageChange)="p2 = $event" previousLabel="Anterior" nextLabel="Siguiente" id="paginate2" style="text-align: center;"></pagination-controls>
+    </div>
+
+    <!-- MODAL 1 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Datos del Paciente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+                </div>
+                <div class="modal-body" *ngFor="let asig of asignados">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Nombres Completos</label>
+                            <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="asig.nombres" name="nombre" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Apellidos Completos</label>
+                            <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="asig.apellidos" name="apellido" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Número de Celular</label>
+                            <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="asig.telefono" name="telefonos" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Pais</label>
+                            <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="asig.pais" name="paises" disabled>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Consulta</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="asig.motivoconsulta" name="consulta" disabled></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODARL 2  -->
+
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Asignación de un Psicólogo para atención al Paciente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+                </div>
+                <div class="modal-body" *ngFor="let l2 of listar_datos2">
+                    <form class="row g-3">
+                        <h4>Datos del Paciente</h4>
+                        <div class="col-md-12">
+                            <label for="inputEmail4" class="form-label">Nombres y Apellidos del Paciente</label>
+                            <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="l2.nombres" name="nombress" disabled>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputPassword4" class="form-label">Consulta del Paciente</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="l2.motivoconsulta" name="consultas" disabled></textarea>
+                        </div>
+
+
+                        <h4>Datos del Psicologo</h4>
+
+                        <div class="col-md-12">
+                            <label for="inputPassword4" class="form-label">Escoja un Psicólogo</label>
+                            <select id="inputState" class="form-select" [(ngModel)]="autoSelect" name="select-psicologo" (ngModelChange)="mostrardatospsicologo($event)">
+                        <option value="-1" disabled>Seleccione un Psicólogo para el Paciente</option>
+                        <option [value]="psicologo.idpsicologo" *ngFor="let psicologo of psico">{{psicologo.nombres}} {{psicologo.apellidos}}</option>
+                      </select>
+                        </div>
+                    </form>
+                    <div class="modal-body" *ngFor="let psic of mostrar_psicologo">
+                        <form class="row g-3">
+                            <div class="col-md-3">
+                                <label for="inputPassword4" class="form-label">Nombres del Psicologo</label>
+                                <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="psic.nombres" name="nombresss" disabled>
+                            </div>
+                            <div class="col-4">
+                                <label for="inputAddress" class="form-label">Apellidos del Psicologo</label>
+                                <input type="text" class="form-control" id="inputAddress" [(ngModel)]="psic.apellidos" name="apellidos" disabled>
+                            </div>
+                            <div class="col-5">
+                                <label for="inputAddress" class="form-label">Apellidos del Psicologo</label>
+                                <input type="text" class="form-control" id="inputAddress" [(ngModel)]="psic.correo" name="correo" disabled>
+                            </div>
+                            <div class="col-8">
+                                <label for="inputAddress" class="form-label">Universidad de Estudio</label>
+                                <input type="text" class="form-control" id="inputAddress" [(ngModel)]="psic.universidad" name="universidad" disabled>
+                            </div>
+                            <div class="col-4">
+                                <label for="inputAddress" class="form-label">Grado Academico</label>
+                                <input type="text" class="form-control" id="inputAddress" [(ngModel)]="psic.gradoacademico" name="gradoacademico" disabled>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="derivarPaciente()">Guardar Asignación</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,6 +18,10 @@ import { ListaPacientesComponent } from './components/lista-pacientes/lista-paci
 import { ReportePacientesComponent } from './components/reporte-pacientes/reporte-pacientes.component';
 import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
 import { IonicModule } from '@ionic/angular'
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { IonicModule } from '@ionic/angular'
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    NgbModule,
+    NgxPaginationModule,
+    NgbPaginationModule,
+    NgbAlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]

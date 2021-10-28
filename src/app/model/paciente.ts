@@ -7,4 +7,5 @@ export class Paciente {
     pais!: string;
     motivoconsulta! : string;
     idpersona! : number;
+    idpsicologo! : number | null;
 }

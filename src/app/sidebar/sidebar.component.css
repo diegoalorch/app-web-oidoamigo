@@ -36,7 +36,7 @@ body {
     background-color: #287bff;
     border-left: 10px solid #287bff;
     transition: 0.5s;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .navigation.active {
@@ -157,15 +157,19 @@ body {
 }
 
 .toggle {
-    position: relative;
-    top: 0;
-    width: 35px;
-    height: 35px;
+    position: fixed;
+    top: 17px;
+    -webkit-box-shadow: 0 3px 10px 0px rgb(0 0 0 / 25%);
+    width: 40px;
+    height: 40px;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
     font-size: 2.5em;
     cursor: pointer;
+    z-index: 9999;
+    background: #fff;
 }
 
 #caja {
@@ -175,6 +179,11 @@ body {
     height: 98%;
     border: 2px solid #287bff;
     border-radius: 8px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 #contenedor {
@@ -187,6 +196,43 @@ body {
 .cursor-click {
     cursor: pointer;
 }
+
+
+/* .container .cursor-click .tooltip {
+    position: absolute;
+    top: -20px;
+    left: calc(100% + 15px);
+    z-index: 3;
+    background: rgb(131, 10, 10);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+    z-index: 9999;
+}
+
+.container .cursor-click:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container.active .cursor-click .tooltip {
+    display: none;
+}
+
+@media (max-width: 420px) {
+    .container .cursor-click .tooltip {
+        display: none;
+    }
+} */
 
 
 /*  --------------  */
@@ -295,34 +341,6 @@ body {
     list-style: none;
 }
 
-.sidebar li .tooltip {
-    position: absolute;
-    top: -20px;
-    left: calc(100% + 15px);
-    z-index: 3;
-    background: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: 400;
-    opacity: 0;
-    white-space: nowrap;
-    pointer-events: none;
-    transition: 0s;
-}
-
-.sidebar li:hover .tooltip {
-    opacity: 1;
-    pointer-events: auto;
-    transition: all 0.4s ease;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.sidebar.open li .tooltip {
-    display: none;
-}
 
 .sidebar input {
     font-size: 15px;
@@ -490,11 +508,7 @@ body {
     margin: 18px
 }
 
-@media (max-width: 420px) {
-    .sidebar li .tooltip {
-        display: none;
-    }
-}
+
 
 .home_content {
     position: absolute;
