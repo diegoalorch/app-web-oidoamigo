@@ -23,4 +23,8 @@ export class PsicologosService {
   getListaSelectPsicologo(id : number): Observable<Psicologos[]>{
     return this.http.get<Psicologos[]>(this.url + '/lista-psicologos-select/' + id);
   }
+
+  createPsicologo(psicologo:Psicologos){
+    return this.http.post<Psicologos[]>(this.url+'/create', psicologo);   
+  }
 }
