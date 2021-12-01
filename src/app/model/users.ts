@@ -1,8 +1,9 @@
 export class Users {
 
     idusuario! : number;
-    username! : number;
-    password! : number;
+    username! : string;
+    password! : string;
     idrol! : number;
-    idpsicologo! : number;    
+    idpsicologo! : number;   
+    pass! : string; 
 }

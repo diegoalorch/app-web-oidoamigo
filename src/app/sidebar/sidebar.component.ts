@@ -19,6 +19,7 @@ export class SidebarComponent implements OnInit {
 
   logout(){
     sessionStorage.removeItem('token');
+    sessionStorage.removeItem('usuario');
     this.toastrService.info('Al done! Hope you have an excellent day');
     sessionStorage.removeItem('docentes');
     this.router.navigate(['/login']);

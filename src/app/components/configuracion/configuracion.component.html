@@ -1,5 +1,41 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
 <div class="todo">
-    <div class="todo1">
-        <p>configuracion works!</p>
+    <div class="lista1">
+        <div class="paasig">
+            <b class="estilos1">Editar Usuario</b>
+        </div>
+
+        <div class="container">
+            <div class="container" style="margin-bottom: 15px;">
+                <div class="row">
+                <div class="col">
+                    <label for="exampleInputEmail1">Contraseña Anterior</label>
+                    <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="nom" [(ngModel)]="usuario.pass">
+                </div>
+                <div class="col">
+                    <label for="exampleInputEmail1">Nombre de Usuario</label>
+                    <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="apel" [(ngModel)]="usuario.username" >
+                </div>
+                <div class="col">
+                    <label for="exampleInputEmail1">Contraseña Nueva</label>
+                    <input type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="dni" [(ngModel)]="usuario.password"  >
+                </div>
+                </div>
+            </div>          
+            <div class="container" style="margin-bottom: 15px;">
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-success" style="margin-top:30px; float: right;" (click) = "updateUser(usuario)" >Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
 </div>
