@@ -8,7 +8,7 @@ import { Paciente } from '../model/paciente';
 })
 export class PacienteService {
 
-  url = 'http://localhost:3000/api/paciente';
+  url = 'https://app-web-oidoamigo.herokuapp.com/api/paciente';
 
   constructor(private http : HttpClient) { }
 

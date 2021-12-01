@@ -9,7 +9,7 @@ import { Users } from '../model/users';
 })
 export class AuthService {
 
-private url = 'http://localhost:3000/api/auth/login';
+private url = 'https://app-web-oidoamigo.herokuapp.com/api/auth/login';
 
   constructor(private http: HttpClient) { }
 
