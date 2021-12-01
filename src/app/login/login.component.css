@@ -59,6 +59,7 @@ body {
     font-size: 45px;
     line-height: 1.2;
     text-align: center;
+    color: #214970;
 }
 
 .p-b-26 {
@@ -110,7 +111,8 @@ body {
     transform: translate(-50%, 240%);
     height: 65px;
     width: 300px;
-    background: #109e92;
+    background: linear-gradient(180deg, #7B1038 0%, #214970 100%);
+    transition: all .3s;
     border-radius: 55px;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -122,6 +124,7 @@ body {
     height: 10px;
     width: 320px;
     top: 548.5px;
+    background: #7B1038;
 }
 
 .button::before {
@@ -131,7 +134,7 @@ body {
     left: -100%;
     height: 100%;
     width: 100%;
-    background: #00443e;
+    background: #46021b;
     border-radius: 55px;
     transition: all 3s ease-in-out;
 }
@@ -209,7 +212,7 @@ body {
     position: absolute;
     height: 2px;
     width: 100%;
-    background: linear-gradient(to right, #00443e 0%, #109e92 100%);
+    background: linear-gradient(to right, #7B1038 0%, #214970 100%);
     left: 0;
     bottom: 0;
     transform: scaleX(0);
@@ -224,7 +227,7 @@ body {
 }
 
 .input-box input[type="submit"] {
-    background: linear-gradient(to right, #00443e 0%, #109e92 100%);
+    background: linear-gradient(to right, #7B1038 0%, #214970 100%);
     font-size: 17px;
     color: #fff;
     border-radius: 5px;
@@ -234,5 +237,5 @@ body {
 
 .input-box input[type="submit"]:hover {
     letter-spacing: 1px;
-    background: linear-gradient(to left, #00443e 0%, #109e92 100%);
+    background: linear-gradient(to left, #7B1038 0%, #214970 100%);
 }

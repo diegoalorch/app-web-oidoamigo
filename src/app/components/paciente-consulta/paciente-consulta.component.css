@@ -55,12 +55,12 @@
 
 .btnn {
     border-width: 2px;
-    border-color: #00443e;
-    color: #00443e;
+    border-color: #4e011d;
+    color: #4e011d;
 }
 
 .btnn:hover {
-    background-color: #109e92;
+    background-color: #7B1038;
     color: white;
 }
 
@@ -72,6 +72,11 @@
 
 .reg {
     width: 318px;
+    background: #7B1038;
+}
+
+.reg:hover {
+    background: #4e011d;
 }
 
 .logearse-contenido {
