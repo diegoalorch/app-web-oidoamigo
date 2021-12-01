@@ -8,7 +8,7 @@ import { Psicologos } from '../model/psicologos';
 })
 export class PsicologosService {
 
-  url = 'http://localhost:3000/api/psicologos';
+  url = 'https://app-web-oidoamigo.herokuapp.com/api/psicologos';
 
   constructor(private http : HttpClient) { }
 
