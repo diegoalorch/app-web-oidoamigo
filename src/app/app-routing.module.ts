@@ -11,10 +11,12 @@ import { ReportePacientesComponent } from './components/reporte-pacientes/report
 import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { AuthGuard } from './service/auth.guard';
+
 const routesHome: Routes = [
 
   {path : '', component: PacienteConsultaComponent}, //paciente consulta
-  {path : 'sidebar', component: SidebarComponent},
+  {path : 'sidebar', component: SidebarComponent , canActivate: [AuthGuard]},
   {path : 'login', component: LoginComponent }, //login
   {path : 'modulos', component: ModulosComponent}, //modulos
   {path : 'agregar-psicologo', component: AgregarPsicologoComponent}, //agregar psicologo
@@ -28,7 +30,7 @@ const routesHome: Routes = [
 const routes: Routes = [
 
   {path : 'login', component: LoginComponent }, //login
-  {path : 'sidebar', component: SidebarComponent, children: routesHome }, //sidebar
+  {path : 'sidebar', component: SidebarComponent , canActivate: [AuthGuard], children: routesHome }, //sidebar
   {path : 'modulos', component: ModulosComponent}, //modulos
   {path : '', component: PacienteConsultaComponent}, //paciente consulta
 ];
