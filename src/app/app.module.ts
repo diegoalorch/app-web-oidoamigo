@@ -21,6 +21,7 @@ import { IonicModule } from '@ionic/angular'
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { PacientesAtendidosPsicologoComponent } from './components/pacientes-atendidos-psicologo/pacientes-atendidos-psicologo.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
     ListaPsicologosComponent,
     ListaPacientesComponent,
     ReportePacientesComponent,
-    ConfiguracionComponent
+    ConfiguracionComponent,
+    PacientesAtendidosPsicologoComponent
   ],
   imports: [
     BrowserModule,

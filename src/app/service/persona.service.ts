@@ -10,7 +10,7 @@ export class PersonaService {
 
   constructor(private http: HttpClient) { }
 
-  url = 'http://localhost:3000/api/auth/personas';
+  url = 'http://localhost:3000/api/personas';
 
   //  LISTAR TODAS LAS PERSONAS
   getAllPersona(): Observable<Persona[]>{

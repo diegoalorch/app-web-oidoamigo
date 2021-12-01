@@ -8,7 +8,7 @@ import { Psicologos } from '../model/psicologos';
 })
 export class PsicologosService {
 
-  url = 'http://localhost:3000/api/auth/psicologos';
+  url = 'http://localhost:3000/api/psicologos';
 
   constructor(private http : HttpClient) { }
 

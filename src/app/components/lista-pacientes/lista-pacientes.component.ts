@@ -59,6 +59,7 @@ export class ListaPacientesComponent implements OnInit {
       (data) => {
         this.listar_datos = data;
         console.log(this.listar_datos);
+        console.log(pacii);
       }
     )
   }
@@ -76,7 +77,7 @@ export class ListaPacientesComponent implements OnInit {
     this.pacienteService.getPacienteID(pac).subscribe(
       (data) => {
         this.listar_datos2 = data;
-        console.log(this.listar_datos);
+        console.log(this.listar_datos2);
       }
     )
   }
@@ -218,14 +219,54 @@ export class ListaPacientesComponent implements OnInit {
   }
 
   designarPaciente(idpaciente : number){
-
-    let paciente : Paciente = new Paciente;
-    paciente.idpaciente = idpaciente;
-    paciente.idpsicologo = null;
-    this.pacienteService.derivarPaciente(paciente).subscribe(
-      () =>{
-      this.listarpacientesAsignados();
-      this.listarpacientesnoAignados();
+    const swal0 = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+    const swal1 = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-danger',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+    
+    Swal.fire({
+      title: '<b style="color: #000000; font-family: Poppins, sans-serif; font-weight: 900; font-size: 25px">¿Deseas designar al Paciente?</b>',
+      html: '<span style="font-size: 18px">Una vez designado tendra que volver a asignarle un Psicólogo...!</span>',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Si, Designar Paciente',
+      cancelButtonText: 'No Designar al Paciente',
+      confirmButtonColor: '#52A820',
+      cancelButtonColor: '#d33',
+      iconColor : '#7B0000'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        swal0.fire(
+          'Designación Exitosa!',
+          'Se ha Designado al Paciente con Exito...',
+          'success'
+        )
+          let paciente : Paciente = new Paciente;
+          paciente.idpaciente = idpaciente;
+          paciente.idpsicologo = null;
+          this.pacienteService.derivarPaciente(paciente).subscribe(
+            () =>{
+            this.listarpacientesAsignados();
+            this.listarpacientesnoAignados();
+          })
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel){
+        swal1.fire(
+          'Designación Cancelada',
+          'Se cancelo la designación del Paciente...',
+          'error'
+      )}
     })
   }
 }

@@ -21,7 +21,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let psicologo of psicologoslist | paginate: {itemsPerPage: 8, currentPage: p} ;let i=index">
+                <tr *ngFor="let psicologo of psicologoslist | paginate: {itemsPerPage: 10, currentPage: p} ;let i=index">
                     <th scope="row">{{i+1}}</th>
                     <td>{{psicologo.nombres}}</td>
                     <td>{{psicologo.apellidos}}</td>
@@ -44,32 +44,6 @@
 
         <!-- (click)="open(content)" -->
 
-        <ng-template #content let-modal>
-            <div class="modal-header">
-                <h4 class="modal-title" id="modal-basic-title">Visualización de los Datos del Psicologo</h4>
-                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="dateOfBirth">Nombre</label>
-                        <div class="input-group">
-                            <input id="dateOfBirth" class="form-control" placeholder="Nombres Completos" name="dp" ngbDatepicker #dp="ngbDatepicker">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Cerrar</button>
-            </div>
-        </ng-template>
-
-
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -82,35 +56,35 @@
                         <form class="row g-3">
                             <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Nombres Completos</label>
-                                <input type="text" class="form-control" id="inputEmail4" placeholder="Nombres Completos">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Nombres Completos" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputPassword4" class="form-label">Apellidos Completos</label>
-                                <input type="text" class="form-control" id="inputPassword4" placeholder="Apellidos Completos">
+                                <input type="text" class="form-control" id="inputPassword4" placeholder="Apellidos Completos" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputPassword4" class="form-label">Dni</label>
-                                <input type="text" class="form-control" id="inputPassword4" placeholder="Dni">
+                                <input type="text" class="form-control" id="inputPassword4" placeholder="Dni" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputPassword4" class="form-label">Pais</label>
-                                <input type="text" class="form-control" id="inputPassword4" placeholder="Pais">
+                                <input type="text" class="form-control" id="inputPassword4" placeholder="Pais" disabled>
                             </div>
                             <div class="col-6">
                                 <label for="inputAddress" class="form-label">Telefono</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="Telefono">
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Telefono" disabled>
                             </div>
                             <div class="col-6">
                                 <label for="inputAddress2" class="form-label">Correo Electronico</label>
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Correo Electronico">
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Correo Electronico" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputCity" class="form-label">Universidad</label>
-                                <input type="text" class="form-control" id="inputCity" placeholder="Universidad">
+                                <input type="text" class="form-control" id="inputCity" placeholder="Universidad" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputZip" class="form-label">Grado Academico</label>
-                                <input type="text" class="form-control" id="inputZip" placeholder="Grado Academico">
+                                <input type="text" class="form-control" id="inputZip" placeholder="Grado Academico" disabled>
                             </div>
                             <div class="d-grid gap-2" style="text-align: center;">
                                 <button type="button" class="btn btn-primary" style="font-size: 17px; font-family: 'Ubuntu', sans-serif;">Modificar Datos</button>

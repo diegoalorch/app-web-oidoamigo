@@ -22,11 +22,10 @@
                     <td>{{paci.apellidos}}</td>
                     <td>{{paci.telefono}}</td>
                     <td class="tabla2">
-                        <ion-icon name="eye-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="listar_datos_paciente(paci.idpaciente)" data-bs-toggle="modal" data-bs-target="#exampleModal"></ion-icon>
-                        <!---->
+                        <ion-icon name="eye-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="listar_datos_paciente(paci.idpaciente)" data-bs-toggle="modal" data-bs-target="#verpacientenoasignado"></ion-icon>
                     </td>
                     <td class="tabla2">
-                        <ion-icon name="school-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="listar_datos_paciente2(paci.idpaciente)" data-bs-toggle="modal" data-bs-target="#exampleModal1"></ion-icon>
+                        <ion-icon name="school-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="listar_datos_paciente2(paci.idpaciente)" data-bs-toggle="modal" data-bs-target="#asignarpaciente"></ion-icon>
                     </td>
                     <td class="tabla2">
                         <ion-icon name="trash-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="eliminarConsulta(paci)"></ion-icon>
@@ -38,35 +37,35 @@
         <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Siguiente" id="paginate1" style="text-align: center;"></pagination-controls>
 
         <!-- MODAL 1 -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="verpacientenoasignado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title" id="exampleModalLabel">Datos del Paciente</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                </button>
+                        </button>
                     </div>
-                    <div class="modal-body" *ngFor="let l of listar_datos">
+                    <div class="modal-body" *ngFor="let asig of listar_datos">
                         <form class="row g-3">
                             <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Nombres Completos</label>
-                                <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="l.nombres" name="nombre" disabled>
+                                <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="asig.nombres" name="nombre" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputPassword4" class="form-label">Apellidos Completos</label>
-                                <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="l.apellidos" name="apellido" disabled>
+                                <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="asig.apellidos" name="apellido" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputPassword4" class="form-label">Número de Celular</label>
-                                <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="l.telefono" name="telefonos" disabled>
+                                <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="asig.telefono" name="telefonos" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputPassword4" class="form-label">Pais</label>
-                                <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="l.pais" name="paises" disabled>
+                                <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="asig.pais" name="paises" disabled>
                             </div>
                             <div class="col-12">
                                 <label for="inputAddress" class="form-label">Consulta</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="l.motivoconsulta" name="consulta" disabled></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="asig.motivoconsulta" name="consulta" disabled></textarea>
                             </div>
                         </form>
                     </div>
@@ -77,9 +76,10 @@
             </div>
         </div>
 
+
         <!-- MODARL 2  -->
 
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="asignarpaciente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -198,7 +198,7 @@
                 <div class="modal-header">
                     <h1 class="modal-title" id="exampleModalLabel">Datos del Paciente</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-            </button>
+                    </button>
                 </div>
                 <div class="modal-body" *ngFor="let asig of asignados">
                     <form class="row g-3">
@@ -221,6 +221,14 @@
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Consulta</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="asig.motivoconsulta" name="consulta" disabled></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Psicólogo Asignado</label>
+                            <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="asig.pais" name="paises" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Número del Psicólogo</label>
+                            <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="asig.pais" name="paises" disabled>
                         </div>
                     </form>
                 </div>
