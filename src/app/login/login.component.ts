@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         this.psicologo.username = datos.usuario.username
         this.psicologo.idrol = datos.usuario.idrol
         this.psicologo.idpsicologo = datos.usuario.idpsicologo
-        sessionStorage.setItem('docentes', JSON.stringify(this.psicologo));
+        sessionStorage.setItem('usuario', JSON.stringify(this.psicologo));
         console.log('Hi');
         this.router.navigate(['/modulos']);
         this.toastrService.success('Hi '+ this.usuario.username+' Grate to have you back...!');
