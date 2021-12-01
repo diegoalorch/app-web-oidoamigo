@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
 import { ModulosComponent } from './components/modulos/modulos.component';
@@ -22,6 +23,10 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import { PacientesAtendidosPsicologoComponent } from './components/pacientes-atendidos-psicologo/pacientes-atendidos-psicologo.component';
+import { ToastrModule } from 'ngx-toastr';
+import { AuthGuard } from './service/auth.guard';
+import { TokenInterceptorService } from './service/token-interceptor.service';
+
 
 
 @NgModule({
@@ -41,6 +46,7 @@ import { PacientesAtendidosPsicologoComponent } from './components/pacientes-ate
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -49,9 +55,14 @@ import { PacientesAtendidosPsicologoComponent } from './components/pacientes-ate
     NgbModule,
     NgxPaginationModule,
     NgbPaginationModule,
-    NgbAlertModule
+    NgbAlertModule,
+    ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [AuthGuard,
+              {provide: HTTP_INTERCEPTORS,
+                useClass: TokenInterceptorService,
+                multi: true
+              }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
