@@ -1,42 +1,62 @@
 <div class="principal">
 
-    <div class="contenedor">
+    <div class="container">
 
-        <div class="modulo1" [routerLink]="[ '/sidebar/agregar-psicologo' ]">
 
-            <img class="registrarpsicologo" src="../../../assets/img/agregar-psicologo.png" alt="">
-            <span>Registrar Psicólogo</span>
 
-        </div>
-
-        <div class="modulo2" [routerLink]="[ '/sidebar/lista-psicologos' ]">
-
-            <img class="listarpsicologos" src="../../../assets/img/listar-psicologos.png" alt="">
-            <span>Lista de Psicólogos</span>
+        <div class="navigation">
 
         </div>
 
-        <div class="modulo3" [routerLink]="[ '/sidebar/lista-pacientes' ]">
 
-            <img class="listarpacientes" src="../../../assets/img/listar-pacientes.png" alt="">
-            <span>Lista de Pacientes</span>
-
-        </div>
-
-        <div class="modulo4" [routerLink]="[ '/sidebar/reporte-paciente' ]">
-
-            <img class="reportepaciente" src="../../../assets/img/reporte-paciente.png" alt="">
-            <span>Reporte de Pacientes</span>
-
-        </div>
-
-        <div class="modulo5" [routerLink]="[ '/sidebar/paciente-asignado' ]">
-
-            <img class="pacienteasignado" src="../../../assets/img/paciente-asignado.png" alt="">
-            <span>Paciente Asignado</span>
-
-        </div>
 
     </div>
 
+</div>
+
+
+<div class="main">
+    <div id="caja">
+        <div id="contenedor">
+            <div class="contenedor">
+                <div class="row">
+                    <div class="col1" [routerLink]="[ '/sidebar/agregar-psicologo' ]">
+
+                        <img class="registrarpsicologo" src="../../../assets/img/agregar-psicologo.png" alt="">
+                        <span>Registrar Psicólogo</span>
+
+                    </div>
+
+                    <div class="col2" [routerLink]="[ '/sidebar/lista-psicologos' ]">
+
+                        <img class="listarpsicologos" src="../../../assets/img/listar-psicologos.png" alt="">
+                        <span>Lista de Psicólogos</span>
+
+                    </div>
+
+                    <div class="col3" [routerLink]="[ '/sidebar/lista-pacientes' ]">
+
+                        <img class="listarpacientes" src="../../../assets/img/listar-pacientes.png" alt="">
+                        <span>Lista de Pacientes</span>
+
+                    </div>
+
+                    <div class="col4" [routerLink]="[ '/sidebar/reporte-paciente' ]">
+
+                        <img class="reportepaciente" src="../../../assets/img/reporte-paciente.png" alt="">
+                        <span>Reporte de Pacientes</span>
+
+                    </div>
+
+                    <div class="col5" [routerLink]="[ '/sidebar/paciente-asignado' ]">
+
+                        <img class="pacienteasignado" src="../../../assets/img/paciente-asignado.png" alt="">
+                        <span>Paciente Asignado</span>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
