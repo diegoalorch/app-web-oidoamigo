@@ -3,11 +3,11 @@
 
 <div class="container">
     <div class="navigation">
-        <ul>
+        <ul style="top: 20px;">
             <li>
                 <a href="">
-                    <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
-                    <span class="title">Oído Amigo</span>
+                    <div class="icon" id="contenedorlogo"><img src="../../assets/img/logorojo.png" alt=""></div>
+                    <span class="title" style="font-size: 35px; font-weight: bold; top: 6px;">Oído Amigo</span>
                 </a>
             </li>
             <li class="cursor-click" [routerLink]="[ '/sidebar/agregar-psicologo' ]">
@@ -47,7 +47,7 @@
                     <span class="title">Configuración</span>
                 </a>
             </li>
-            <li>
+            <li class="cursor-click">
                 <a (click)="logout()">
                     <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
                     <span class="title">Cerrar Sesión</span>
