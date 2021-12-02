@@ -10,38 +10,14 @@
                     <span class="title" style="font-size: 35px; font-weight: bold; top: 6px;">Oído Amigo</span>
                 </a>
             </li>
-            <li class="cursor-click" [routerLink]="[ '/sidebar/agregar-psicologo' ]">
+            <li *ngFor="let accesos of acceso" class="cursor-click" [routerLink]= "accesos.link" >
                 <a>
-                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
-                    <span class="title">Agregar Nuevo Psicologo</span>
+                    <span class="icon"><ion-icon name="{{accesos.icon}}"></ion-icon></span>
+                    <span class="title">{{accesos.nomaccesos}}</span>
                 </a>
 
             </li>
-            <li class="cursor-click" [routerLink]="[ '/sidebar/lista-psicologos' ]">
-                <a>
-                    <span class="icon"><ion-icon name="list-circle-outline"></ion-icon></span>
-                    <span class="title">Lista de Psicologos</span>
-                </a>
-            </li>
-            <li class="cursor-click" [routerLink]="[ '/sidebar/lista-pacientes' ]">
-                <a>
-                    <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
-                    <span class="title">Lista de Pacientes</span>
-                </a>
-            </li>
-            <li class="cursor-click" [routerLink]="[ '/sidebar/reporte-paciente' ]">
-                <a>
-                    <span class="icon"><ion-icon name="stats-chart-outline"></ion-icon></span>
-                    <span class="title">Reportes de Pacientes</span>
-                </a>
-            </li>
-            <li class="cursor-click" [routerLink]="[ '/sidebar/paciente-asignado' ]">
-                <a>
-                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
-                    <span class="title">Paciente Asignado</span>
-                </a>
-            </li>
-            <li class="cursor-click" [routerLink]="[ '/sidebar/configuracion' ]">
+            <li class="cursor-click" [routerLink]="['/sidebar/configuracion']">
                 <a>
                     <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                     <span class="title">Configuración</span>
