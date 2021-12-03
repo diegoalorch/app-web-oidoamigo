@@ -5,24 +5,35 @@
 <div class="todo">
     <div class="lista1">
         <div class="paasig">
+            <div class="listapng">
+                <img src="../../../assets/img/lista.png" alt="">
+            </div>
             <b class="estilos1">Lista de Psicólogos</b>
         </div>
+        <br>
         <table class="table table-hover">
             <thead>
+
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nombres</th>
-                    <th scope="col">Apellidos</th>
-                    <th scope="col">Correo</th>
-                    <th scope="col">Telefono</th>
-                    <th scope="col">Universidad</th>
-                    <th scope="col">Grado</th>
+                    <th scope="col" style="color: #7b1038; font-weight: bold; text-align: center;">#</th>
+                    <th scope="col">
+                        <ion-icon name="person-outline" style="font-size: 22px; color: #7b1038; margin-right: 7px; top: 5px; position: relative;"></ion-icon>Nombres</th>
+                    <th scope="col">
+                        <ion-icon name="person-outline" style="font-size: 22px; color: #7b1038; margin-right: 7px; top: 5px; position: relative;"></ion-icon>Apellidos</th>
+                    <th scope="col">
+                        <ion-icon name="mail-unread-outline" style="font-size: 22px; color: #7b1038; margin-right: 7px; top: 5px; position: relative;"></ion-icon>Correo</th>
+                    <th scope="col">
+                        <ion-icon name="call-outline" style="font-size: 22px; color: #7b1038; margin-right: 7px; top: 5px; position: relative;"></ion-icon>Telefono</th>
+                    <th scope="col">
+                        <ion-icon name="library-outline" style="font-size: 22px; color: #7b1038; margin-right: 7px; top: 5px; position: relative;"></ion-icon>Universidad</th>
+                    <th scope="col">
+                        <ion-icon name="school-outline" style="font-size: 22px; color: #7b1038; margin-right: 7px; top: 5px; position: relative;"></ion-icon>Grado</th>
                     <th scope="col">Ver</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let psicologo of psicologoslist | paginate: {itemsPerPage: 10, currentPage: p} ;let i=index">
-                    <th scope="row">{{i+1}}</th>
+                    <th style="color: #7b1038; font-weight: bold; text-align: center;" scope="row">{{i+1}}</th>
                     <td>{{psicologo.nombres}}</td>
                     <td>{{psicologo.apellidos}}</td>
                     <td>{{psicologo.correo}}</td>
@@ -30,7 +41,7 @@
                     <td>{{psicologo.universidad}}</td>
                     <td>{{psicologo.gradoacademico}}</td>
                     <td data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <ion-icon name="eye-outline" style="cursor: pointer; color: brown; font-size: 25px;"></ion-icon>
+                        <ion-icon name="eye-outline" style="cursor: pointer; color: #7b1038; font-size: 25px;"></ion-icon>
                     </td>
                 </tr>
             </tbody>
@@ -48,6 +59,9 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
+                        <div class="perfilmodal">
+                            <img src="../../../assets/img/perfilhombre.png">
+                        </div>
                         <h1 class="modal-title" id="exampleModalLabel">Datos Generales</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 </button>
@@ -55,39 +69,66 @@
                     <div class="modal-body">
                         <form class="row g-3">
                             <div class="col-md-6">
-                                <label for="inputEmail4" class="form-label">Nombres Completos</label>
+                                <label for="inputEmail4" class="form-label">
+                                    <ion-icon name="person-outline" style="padding-right: 10px; font-size: 25px; color: #7b1038;"></ion-icon>
+                                    Nombres Completos
+                                </label>
                                 <input type="text" class="form-control" id="inputEmail4" placeholder="Nombres Completos" disabled>
                             </div>
                             <div class="col-md-6">
-                                <label for="inputPassword4" class="form-label">Apellidos Completos</label>
+                                <label for="inputPassword4" class="form-label">
+                                    <ion-icon name="person-outline" style="padding-right: 10px; font-size: 25px; color: #7b1038;"></ion-icon>
+                                    Apellidos Completos
+                                </label>
                                 <input type="text" class="form-control" id="inputPassword4" placeholder="Apellidos Completos" disabled>
                             </div>
                             <div class="col-md-6">
-                                <label for="inputPassword4" class="form-label">Dni</label>
+                                <label for="inputPassword4" class="form-label">
+                                    <ion-icon name="card-outline" style="padding-right: 10px; font-size: 25px; color: #7b1038;"></ion-icon>
+                                    Dni
+                                </label>
                                 <input type="text" class="form-control" id="inputPassword4" placeholder="Dni" disabled>
                             </div>
                             <div class="col-md-6">
-                                <label for="inputPassword4" class="form-label">Pais</label>
+                                <label for="inputPassword4" class="form-label">
+                                    <ion-icon name="airplane-outline" style="padding-right: 10px; font-size: 25px; color: #7b1038;"></ion-icon>
+                                    Pais
+                                </label>
                                 <input type="text" class="form-control" id="inputPassword4" placeholder="Pais" disabled>
                             </div>
                             <div class="col-6">
-                                <label for="inputAddress" class="form-label">Telefono</label>
+                                <label for="inputAddress" class="form-label">
+                                    <ion-icon name="call-outline" style="padding-right: 10px; font-size: 25px; color: #7b1038;"></ion-icon>
+                                    Telefono
+                                </label>
                                 <input type="text" class="form-control" id="inputAddress" placeholder="Telefono" disabled>
                             </div>
                             <div class="col-6">
-                                <label for="inputAddress2" class="form-label">Correo Electronico</label>
+                                <label for="inputAddress2" class="form-label">
+                                    <ion-icon name="mail-open-outline" style="padding-right: 10px; font-size: 25px; color: #7b1038;"></ion-icon>
+                                    Correo Electronico
+                                </label>
                                 <input type="text" class="form-control" id="inputAddress2" placeholder="Correo Electronico" disabled>
                             </div>
                             <div class="col-md-6">
-                                <label for="inputCity" class="form-label">Universidad</label>
+                                <label for="inputCity" class="form-label">
+                                    <ion-icon name="library-outline" style="padding-right: 10px; font-size: 25px; color: #7b1038;"></ion-icon>
+                                    Universidad
+                                </label>
                                 <input type="text" class="form-control" id="inputCity" placeholder="Universidad" disabled>
                             </div>
                             <div class="col-md-6">
-                                <label for="inputZip" class="form-label">Grado Academico</label>
+                                <label for="inputZip" class="form-label">
+                                    <ion-icon name="school-outline" style="padding-right: 10px; font-size: 25px; color: #7b1038;"></ion-icon>
+                                    Grado Academico
+                                </label>
                                 <input type="text" class="form-control" id="inputZip" placeholder="Grado Academico" disabled>
                             </div>
                             <div class="d-grid gap-2" style="text-align: center;">
-                                <button type="button" class="btn btn-primary" style="font-size: 17px; font-family: 'Ubuntu', sans-serif;">Modificar Datos</button>
+                                <button type="button" class="btn btn-danger" style="align-items: center; display: flex; position: relative; justify-content: center;">
+                                    <ion-icon name="create-outline" style="padding-right: 10px; font-size: 25px; color: #ffffff;"></ion-icon>
+                                    Modificar Datos
+                                </button>
                             </div>
                         </form>
                     </div>

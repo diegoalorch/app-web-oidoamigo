@@ -5,59 +5,67 @@
 <div class="todo">
     <div class="lista1">
         <div class="paasig">
-            <b class="estilos1">Agregar Psicologos</b>
-        </div>
+            <div class="perfilagregar">
+                <img src="../../../assets/img/agregarpsicologoperfil.png" alt="">
+            </div>
+            <div class="letras">
+                <b class="estilos1">Agregar un Nuevo</b><br>
+                <b class="estilos1">Psicólogo</b>
+            </div>
 
-        <div class="container">
+        </div>
+        <hr style="height: 4px; background-color: #7b1038; top: -10px; position: relative;">
+
+        <div class="container" style="top: 15px;">
             <div class="container" style="margin-bottom: 15px;">
                 <div class="row">
-                <div class="col">
-                <label for="exampleInputEmail1">Nombres</label>
-                <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="nom" [(ngModel)]="psicologo.nombres">
-                </div>
-                <div class="col">
-                <label for="exampleInputEmail1">Apellidos</label>
-                <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="apel"  [(ngModel)]="psicologo.apellidos">
-                </div>
-                <div class="col">
-                    <label for="exampleInputEmail1">DNI</label>
-                    <input type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="dni"   [(ngModel)]="psicologo.dni">
-                </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1"><ion-icon name="people-outline"></ion-icon>Nombres</label>
+                        <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="nom" [(ngModel)]="psicologo.nombres">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1"><ion-icon name="people-outline"></ion-icon>Apellidos</label>
+                        <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="apel" [(ngModel)]="psicologo.apellidos">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1"><ion-icon name="card-outline"></ion-icon>DNI</label>
+                        <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="dni" [(ngModel)]="psicologo.dni">
+                    </div>
                 </div>
             </div>
             <div class="container" style="margin-bottom: 15px;">
                 <div class="row">
-                <div class="col">
-                <label for="exampleInputEmail1">Pais</label>
-                <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="pais"  [(ngModel)]="psicologo.pais">
-                </div>
-                <div class="col">
-                <label for="exampleInputEmail1">Correo</label>
-                <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="mail"  [(ngModel)]="psicologo.correo">
-                </div>
-                <div class="col">
-                    <label for="exampleInputEmail1">Telefono</label>
-                    <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="tel" [(ngModel)]="psicologo.telefono">
-                </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1"><ion-icon name="airplane-outline"></ion-icon>Pais</label>
+                        <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="pais" [(ngModel)]="psicologo.pais">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1"><ion-icon name="airplane-outline"></ion-icon>Correo</label>
+                        <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="mail" [(ngModel)]="psicologo.correo">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1"><ion-icon name="airplane-outline"></ion-icon>Telefono</label>
+                        <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="tel" [(ngModel)]="psicologo.telefono">
+                    </div>
                 </div>
             </div>
             <div class="container" style="margin-bottom: 15px;">
                 <div class="row">
-                <div class="col">
-                <label for="exampleInputEmail1">Direccion</label>
-                <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="dir" [(ngModel)]="psicologo.direccion">
-                </div>
-                <div class="col">
-                <label for="exampleInputEmail1">Universidad</label>
-                <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="uni"  [(ngModel)]="psicologo.universidad">
-                </div>
-                <div class="col">
-                    <label for="exampleInputEmail1">Grado Academcio</label>
-                    <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="grado" [(ngModel)]="psicologo.gradoacademico">
-                </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1"><ion-icon name="location-outline"></ion-icon>Direccion</label>
+                        <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="dir" [(ngModel)]="psicologo.direccion">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1"><ion-icon name="library-outline"></ion-icon>Universidad</label>
+                        <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="uni" [(ngModel)]="psicologo.universidad">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1"><ion-icon name="school-outline"></ion-icon>Grado Academcio</label>
+                        <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="grado" [(ngModel)]="psicologo.gradoacademico">
+                    </div>
                 </div>
             </div>
-            <div class = "container">
+            <div class="container">
                 <div class="paauser">
                     <b class="estilos2">Usuario Psicologo</b>
                 </div>
@@ -65,16 +73,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                <label for="exampleInputEmail1">User Name</label>
-                <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="username" [(ngModel)]="psicologo.username">
+                        <label for="exampleInputEmail1"><ion-icon name="person-add-outline"></ion-icon>User Name</label>
+                        <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="username" [(ngModel)]="psicologo.username">
                     </div>
                     <div class="col">
-                <label for="exampleInputEmail1">Password</label>
-                <input  type="password" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="pass" [(ngModel)]="psicologo.password">
+                        <label for="exampleInputEmail1"><ion-icon name="lock-closed-outline"></ion-icon>Password</label>
+                        <input type="password" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="pass" [(ngModel)]="psicologo.password">
                     </div>
                     <div class="col">
-                <label for="exampleInputEmail1">Rol</label>
-                <select  name="" id="inputconse"  class="form-control" [(ngModel)]="psicologo.idrol"> 
+                        <label for="exampleInputEmail1"><ion-icon name="desktop-outline"></ion-icon>Rol</label>
+                        <select name="" id="inputconse" class="form-control" [(ngModel)]="psicologo.idrol"> 
                     <option value="1"> Admin</option>
                     <option value="2"> Psicologo</option>
                   </select>
@@ -88,12 +96,10 @@
                     <div class="col">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-success" style="margin-top:30px; float: right;" (click)="createPsicologo()"  >Add</button>
+                        <button type="button" class="btn btn-danger" (click)="createPsicologo()">Crear Trabajador</button>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 </div>
-
-

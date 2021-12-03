@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 .lista1 {
     width: 98%;
     position: relative;
-    top: 12px;
+    top: -25px;
     left: 12px;
-    padding: 10px;
     border-radius: 12px;
     box-shadow: 0 3px 10px 0px rgb(0 0 0 / 25%);
     overflow-x: scroll;
+    background: #f5f4ff;
 }
 
 ::-webkit-scrollbar {
@@ -17,6 +20,14 @@
 .paasig {
     display: flex;
     justify-content: center;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: #f5f4ff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .paauser {
@@ -25,17 +36,116 @@
 }
 
 .estilos1 {
-    color: #005eac;
-    font-size: 40px;
-    font-family: "Ubuntu", sans-serif;
+    color: #000000;
+    font-size: 50px;
     font-weight: 700;
-    text-align: center;
+    left: 20px;
+    font-family: 'Concert One', cursive;
+    position: relative;
+    align-items: center;
+}
+
+@media screen and (max-width: 1100px) {
+    .estilos1 {
+        color: #000000;
+        font-size: 45px;
+        font-weight: 700;
+        font-family: 'Concert One', cursive;
+        position: relative;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .estilos1 {
+        color: #000000;
+        font-size: 35px;
+        font-weight: 700;
+        font-family: 'Concert One', cursive;
+        position: relative;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .estilos1 {
+        color: #000000;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: 'Concert One', cursive;
+        left: -5px;
+        position: relative;
+        align-items: center;
+    }
+    .letras {
+        text-align: center;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+    .paasig {
+        height: 210px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        background: #f5f4ff;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .estilos2 {
-    color: #057ddf;
+    color: #7b1038;
     font-size: 30px;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+.perfilagregar {
+    max-width: 191px;
+    height: 170px;
+}
+
+.letras {
+    text-align: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-icon {
+    padding-right: 10px;
+    font-size: 25px;
+    color: #7b1038;
+}
+
+label {
+    align-items: center;
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 220px;
+    float: right;
+    height: 45px;
+    background: #7b1038;
+    font-size: 17px;
+}
+
+.btn:hover {
+    margin-top: 20px;
+    float: right;
+    height: 45px;
+    background: #5a0222;
+    font-size: 17px;
 }

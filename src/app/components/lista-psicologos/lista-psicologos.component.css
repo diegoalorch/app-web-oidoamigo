@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 .lista1 {
     width: 98%;
     position: relative;
-    top: 12px;
+    top: -32px;
     left: 12px;
     padding: 10px;
     border-radius: 12px;
@@ -20,9 +23,64 @@
 }
 
 .estilos1 {
-    color: #005eac;
-    font-size: 40px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
+    color: #7b1038;
+    font-size: 50px;
+    font-family: 'Concert One', cursive;
+    font-weight: 600;
     text-align: center;
+    left: 15px;
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+th {
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.listapng {
+    width: 110px;
+    height: 110px;
+}
+
+.perfilmodal {
+    width: 80px;
+    height: 80px;
+}
+
+.modal-title {
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    font-size: 45px;
+    position: relative;
+    left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.modal-header {
+    background: #f5f4ff;
+}
+
+.btn-danger {
+    font-size: 17px;
+    font-family: 'Ubuntu', sans-serif;
+    background: #7b1038;
+}
+
+.btn-danger:hover {
+    font-size: 17px;
+    font-family: 'Ubuntu', sans-serif;
+    background: #660025;
+}
+
+label {
+    align-items: center;
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
