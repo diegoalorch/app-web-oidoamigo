@@ -33,8 +33,8 @@ export class PacienteService {
   }
 
   // LISTAR DATOS DEL PACIENTE
-  getListaPacienteInput() : Observable<Paciente[]>{
-    return this.http.get<Paciente[]>(this.url + '');
+  getListaPacienteInput(id:number) : Observable<Paciente[]>{
+    return this.http.get<Paciente[]>(this.url + '/paciente-asignado/'+id);
   }
 
   derivarPaciente(derivar : Paciente){

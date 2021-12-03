@@ -5,26 +5,28 @@
                 <div class="pacienteperfil">
                     <img src="../../../assets/img/pacienteasignadoperfil.png" alt="">
                 </div>
-                <div class="perfilpaciente2">
+                <div *ngFor="let paciente of pac" class="perfilpaciente2">
                     <div>
-                        <label> Nombre</label>
+                        <label for="">Nombres: </label><br>
+                        <label> {{paciente.nombres}}</label>
                     </div>
                     <br>
                     <div>
-                        <label> Apellido</label>
+                        <label for="">Apellidos: </label><br>
+                        <label> {{paciente.apellidos}}</label>
                     </div>
                     <br>
                     <div>
-                        <label> Telefono</label>
+                        <label for="">Telefono: </label><br>
+                        <label> {{paciente.telefono}}</label>
                     </div><br>
                     <div>
-                        <label> DNI</label>
+                        <label for="">Pais: </label><br>
+                        <label> {{paciente.pais}}</label>
                     </div><br>
                     <div>
-                        <label> Pais</label>
-                    </div><br>
-                    <div>
-                        <label> Consulta</label>
+                        <label for="">Motivo Consulta</label><br>
+                        <label> {{paciente.motivoconsulta}}</label>
                     </div>
                 </div>
             </div>
