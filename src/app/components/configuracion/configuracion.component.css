@@ -1,54 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 .btn-success,
 .btn-success:active,
 .btn-success:visited,
 .btn-success:focus {
-  background-color: #52a820;
-  border-color: #2d7a00;
+    background-color: #7b1038;
+    border-color: #6b042a;
+    float: right;
 }
 
 .btn-success:hover {
-  background-color: #2e7504;
+    background-color: #580020;
 }
 
 .lista1 {
-  width: 98%;
-  position: relative;
-  top: 12px;
-  left: 12px;
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px 0px rgb(0 0 0 / 25%);
-  overflow-x: scroll;
+    width: 98%;
+    position: relative;
+    top: -32px;
+    left: 12px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px 0px rgb(0 0 0 / 25%);
+    overflow-x: scroll;
 }
 
 .lista2 {
-  width: 98%;
-  position: relative;
-  top: 40px;
-  left: 12px;
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px 0px rgb(0 0 0 / 25%);
-  overflow-x: scroll;
+    width: 98%;
+    position: relative;
+    top: -32px;
+    left: 12px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px 0px rgb(0 0 0 / 25%);
+    background: #e3dfff;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
+}
+
+.paasig1 {
+    display: flex;
+    justify-content: center;
+    background: #e3dfff;
+    padding: 8px;
+    align-items: center;
+    position: relative;
 }
 
 .paasig {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    top: 15px;
+    position: relative;
+}
+
+.estilos4 {
+    color: #000000;
+    font-size: 50px;
+    font-family: 'Concert One', cursive;
+    font-weight: 500;
+    position: relative;
+    left: 10px;
+    text-align: center;
 }
 
 .estilos1 {
-  color: #005eac;
-  font-size: 40px;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  text-align: center;
+    color: #000000;
+    font-size: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    top: -5px;
+}
+
+.estilos3 {
+    color: #000000;
+    font-size: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    position: relative;
+    top: -25px;
+    align-items: center;
+    justify-content: center;
 }
 
 .tabla2 {
-  text-align: center;
+    text-align: center;
+}
+
+.perfilusuario {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: 7px;
+}
+
+.formulario {
+    padding: 20px;
+}
+
+ion-icon {
+    padding-right: 10px;
+    font-size: 25px;
+    color: #7b1038;
+}
+
+h2 {
+    align-items: center;
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+label {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 24px;
+    padding-left: 37px;
+    margin-bottom: 18px;
+}
+
+.edit {
+    width: 100px;
+    height: 40px;
+}
+
+.letrasedit {
+    text-align: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.container1 {
+    margin-top: 40px;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+}
+
+.label {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.container4 {
+    width: 100%;
+}
+
+.col-md-8 {
+    margin-bottom: 25px
+}
+
+.col-sm-4 {
+    grid-column-start: 2;
+    grid-column-end: 1;
+}
+
+@media screen and (max-width: 1250px) {
+    .row3 {
+        grid-template-columns: auto;
+    }
+    .col-md-8 {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .col-sm-4 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
 }

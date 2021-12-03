@@ -3,83 +3,99 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
 <div class="todo">
-    <div class="row">
+    <div class="row row3">
         <div class="col-md-8">
-          <div class="lista1" *ngFor="let psi of psicolo">
-            <div class="paasig">
-                <b class="estilos1">Perfil Usuario</b>
+            <div class="lista1" *ngFor="let psi of psicolo">
+                <div class="paasig1">
+                    <div class="perfilusuario" style="margin-bottom: 2%;">
+                        <img src="../../../assets/img/perfilhombre.png" alt="">
+                    </div>
+
+                    <b class="estilos4">Perfil Usuario</b>
+
+                </div>
+                <form class="formulario">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <h2>
+                                <ion-icon name="person-outline"></ion-icon>Nombres y Apellidos: </h2>
+                            <label>{{psi.nombres+" "+psi.apellidos}}</label>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h2>
+                                <ion-icon name="library-outline"></ion-icon>Universidad: </h2>
+                            <label for="">{{psi.universidad}}</label>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h2>
+                                <ion-icon name="school-outline"></ion-icon>Grado Academico: </h2>
+                            <label for="">{{psi.gradoacademico}}</label>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h2>
+                                <ion-icon name="card-outline"></ion-icon>DNI: </h2>
+                            <label for="">{{psi.dni}}</label>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h2>
+                                <ion-icon name="mail-open-outline"></ion-icon>Correo: </h2>
+                            <label for="">{{psi.correo}}</label>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h2>
+                                <ion-icon name="phone-portrait-outline"></ion-icon>Telefono: </h2>
+                            <label for="">{{psi.telefono}}</label>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h2>
+                                <ion-icon name="airplane-outline"></ion-icon>Pais: </h2>
+                            <label for="">{{psi.pais}}</label>
+                        </div>
+                    </div>
+                </form>
             </div>
-                <div class="row" style="margin-bottom: 2%;">
-                    <div class="col-md"><label for="">Imagen</label></div>
-                </div>
-                <div class="row" style="margin-bottom: 2%;">
-                    <h2>Nombres y Apellidos: </h2>
-                    <div class="col-md"><label>{{psi.nombres+" "+psi.apellidos}}</label></div>
-                </div>
-                <div class="row" style="margin-bottom: 2%;">
-                    <h2>Universidad: </h2>
-                    <div class="col-md"><label for="">{{psi.universidad}}</label></div>
-                </div>
-                <div class="row" style="margin-bottom: 2%;">
-                    <h2>Grado Academico: </h2>
-                    <div class="col-md"><label for="">{{psi.gradoacademico}}</label></div>
-                </div>
-                <div class="row" style="margin-bottom: 2%;">
-                    <h2>DNI: </h2>
-                    <div class="col-md"><label for="">{{psi.dni}}</label></div>
-                </div>
-                <div class="row" style="margin-bottom: 2%;">
-                    <h2>Correo: </h2>
-                    <div class="col-md"><label for="">{{psi.correo}}</label></div>
-                </div>
-                <div class="row" style="margin-bottom: 2%;">
-                    <h2>Telefono: </h2>
-                    <div class="col-md"><label for="">{{psi.telefono}}</label></div>
-                </div>
-                <div class="row">
-                    <h2>Pais: </h2>
-                    <div class="col-md"><label for="">{{psi.pais}}</label></div>
-                </div>
-          </div>  
         </div>
-        <div class="col-sm-4">
-            <div class="lista1">
+        <div class="col-sm-4 colum4">
+            <div class="lista2">
                 <div class="paasig">
-                    <b class="estilos1">Editar Usuario</b>
+                    <div class="edit">
+                        <img src="../../../assets/img/editusuario.png" alt="">
+                    </div>
+
+                    <div class="letrasedit">
+                        <b class="estilos1">Editar</b><br>
+                        <b class="estilos3"> Usuario</b>
+                    </div>
                 </div>
                 <div class="container">
-                    <div class="container" style="margin-bottom: 15px;">
+                    <div class="container1">
                         <div class="row" style="margin-bottom: 10%;">
                             <div class="col">
-                                <label for="exampleInputEmail1">Contraseña Anterior</label>
-                                <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="nom" [(ngModel)]="usuario.pass">
+                                <span class="label" for="exampleInputEmail1"><ion-icon name="lock-open-outline"></ion-icon>Contraseña Anterior</span>
+                                <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="nom" [(ngModel)]="usuario.pass">
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10%;">
                             <div class="col">
-                                <label for="exampleInputEmail1">Nombre de Usuario</label>
-                                <input  type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="apel" [(ngModel)]="usuario.username" >
+                                <span class="label" for="exampleInputEmail1"><ion-icon name="person-outline"></ion-icon>Nombre de Usuario</span>
+                                <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="apel" [(ngModel)]="usuario.username">
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10%;">
                             <div class="col">
-                                <label for="exampleInputEmail1">Contraseña Nueva</label>
-                                <input type="text" class="form-control"  aria-label="Names" aria-describedby="basic-addon1" id="dni" [(ngModel)]="usuario.password"  >
-                            </div>
-                        </div>
-                    </div>          
-                    <div class="container" style="margin-bottom: 15px;">
-                        <div class="row" style="margin-top: 40%;">
-                            <div class="col">
-                            </div>
-                            <div class="col">
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-success" style="margin-top:30px; float: right;" (click) = "updateUser(usuario)" >Enviar</button>
+                                <span class="label" for="exampleInputEmail1"><ion-icon name="lock-closed-outline"></ion-icon>Contraseña Nueva</span>
+                                <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="dni" [(ngModel)]="usuario.password">
                             </div>
                         </div>
                     </div>
-                </div> 
+                    <div class="container4" style="margin-bottom: 10px;">
+                        <div class="row" style="margin-top: 14%;">
+                            <div class="d-grid gap-2 col-12 mx-auto">
+                                <button type="button" class="btn btn-success" (click)="updateUser(usuario)">Cambiar Contraseña</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
