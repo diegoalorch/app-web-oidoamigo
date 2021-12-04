@@ -7,8 +7,7 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nombres</th>
-                    <th scope="col">Apellidos</th>
+                    <th scope="col">Nombres y Apellidos</th>
                     <th scope="col">Telefono</th>
                     <th scope="col" class="tabla2">Ver</th>
                     <th scope="col" class="tabla2">Asignar</th>
@@ -18,8 +17,7 @@
             <tbody>
                 <tr *ngFor="let paci of listar_pacientes | paginate: {itemsPerPage: 6, currentPage: p, id: 'paginate1'}; let i=index">
                     <th scope="row">{{i+1}}</th>
-                    <td>{{paci.nombres}}</td>
-                    <td>{{paci.apellidos}}</td>
+                    <td>{{paci.nombres + " " + paci.apellidos}}</td>
                     <td>{{paci.telefono}}</td>
                     <td class="tabla2">
                         <ion-icon name="eye-outline" style="cursor: pointer; color: brown; font-size: 25px; align-items: center;" (click)="listar_datos_paciente(paci.idpaciente)" data-bs-toggle="modal" data-bs-target="#verpacientenoasignado"></ion-icon>
@@ -156,8 +154,7 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nombres</th>
-                        <th scope="col">Apellidos</th>
+                        <th scope="col">Nombres y Apellidos</th>
                         <th scope="col">Telefono</th>
                         <th scope="col" class="tabla2">Ver</th>
                         <th scope="col" class="tabla2">Derivar</th>
@@ -168,8 +165,7 @@
                 <tbody>
                     <tr *ngFor="let asignados of asignados_pacientes | paginate: {itemsPerPage: 6, currentPage: p2, id: 'paginate2'}; let i=index">
                         <th scope="row">{{i+1}}</th>
-                        <td>{{asignados.nombres}}</td>
-                        <td>{{asignados.apellidos}}</td>
+                        <td>{{asignados.nombres + " " + asignados.apellidos}}</td>
                         <td>{{asignados.telefono}}</td>
                         <td class="tabla2">
                             <ion-icon name="eye-outline" style="cursor: pointer; color: brown; font-size: 25px;" data-bs-toggle="modal" data-bs-target="#exampleModal2" (click)="mostraPaciente2(asignados.idpaciente)"></ion-icon>
