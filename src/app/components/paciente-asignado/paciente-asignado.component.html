@@ -1,55 +1,211 @@
 <div class="todo1">
     <div class="todo">
         <div class="gripgeneral">
-            <div class="grip item1">
+            <div class="grip1 item1">
                 <div class="pacienteperfil">
                     <img src="../../../assets/img/pacienteasignadoperfil.png" alt="">
                 </div>
+
                 <div *ngFor="let paciente of pac" class="perfilpaciente2">
-                    <div>
-                        <label for="">Nombres: </label><br>
-                        <label> {{paciente.nombres}}</label>
+                    <div class="distancia">
+                        <label class="texto" for=""><ion-icon name="person-outline"></ion-icon>Nombres y Apellidos</label><br>
+                        <label class="texto1"> {{paciente.nombres + " " + paciente.apellidos}}</label>
                     </div>
-                    <br>
-                    <div>
-                        <label for="">Apellidos: </label><br>
-                        <label> {{paciente.apellidos}}</label>
+                    <div class="distancia">
+                        <label class="texto" for=""><ion-icon name="person-outline"></ion-icon>Telefono</label><br>
+                        <label class="texto1"> {{paciente.telefono}}</label>
                     </div>
-                    <br>
-                    <div>
-                        <label for="">Telefono: </label><br>
-                        <label> {{paciente.telefono}}</label>
-                    </div><br>
-                    <div>
-                        <label for="">Pais: </label><br>
-                        <label> {{paciente.pais}}</label>
-                    </div><br>
-                    <div>
-                        <label for="">Motivo Consulta</label><br>
-                        <label> {{paciente.motivoconsulta}}</label>
+                    <div class="distancia">
+                        <label class="texto" for=""><ion-icon name="airplane-outline"></ion-icon>Pais</label><br>
+                        <label class="texto1"> {{paciente.pais}}</label>
+                    </div>
+                    <div class="distancia">
+                        <label class="texto" for=""><ion-icon name="help-circle-outline"></ion-icon>Motivo Consulta</label><br>
+                        <label class="texto3"> {{paciente.motivoconsulta}}</label>
                     </div>
                 </div>
             </div>
             <div class="grip item2">
-                <div class="sesion1"></div>
+                <div class="cuadro">
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="videocam-outline"></ion-icon>Sesión 1</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>Fecha de la Sesión</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">25/04/2021</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="time-outline"></ion-icon>Hora: 08:00 Am</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">Estado: Finalizado</label>
+                    </div>
+                    <div class="cuacontent">
+                        <label class="cuatext"></label>
+                    </div>
+                </div>
             </div>
             <div class="grip item3">
-                <div class="sesion2"></div>
+                <div class="cuadro">
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="videocam-outline"></ion-icon>Sesión 2</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>Fecha de la Sesión</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">28/04/2021</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="time-outline"></ion-icon>Hora: 09:00 Am</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">Estado: Finalizado</label>
+                    </div>
+                    <div class="cuacontent">
+                        <label class="cuatext"></label>
+                    </div>
+                </div>
             </div>
             <div class="grip item4">
-                <div class="sesion3"></div>
+                <div class="cuadro">
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="videocam-outline"></ion-icon>Sesión 3</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>Fecha de la Sesión</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">18/05/2021</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="time-outline"></ion-icon>Hora: 10:00 Am</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">Estado: Finalizado</label>
+                    </div>
+                    <div class="cuacontent">
+                        <label class="cuatext"></label>
+                    </div>
+                </div>
             </div>
             <div class="grip item5">
-                <div class="reporte1"></div>
+                <div class="cuadro">
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="document-attach-outline"></ion-icon>Reporte 1</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>Fecha del Reporte</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">25/04/2021</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="time-outline"></ion-icon>Hora: 08:00 Am</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">Estado: Finalizado</label>
+                    </div>
+                    <div class="cuacontent">
+                        <label class="cuatext"></label>
+                    </div>
+                </div>
             </div>
             <div class="grip item6">
-                <div class="reporte2"></div>
+                <div class="cuadro">
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="document-attach-outline"></ion-icon>Reporte 2</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>Fecha del Reporte</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">25/04/2021</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="time-outline"></ion-icon>Hora: 08:00 Am</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">Estado: Finalizado</label>
+                    </div>
+                    <div class="cuacontent">
+                        <label class="cuatext"></label>
+                    </div>
+                </div>
             </div>
             <div class="grip item7">
-                <div class="reporte3"></div>
+                <div class="cuadro">
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="document-attach-outline"></ion-icon>Reporte 3</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>Fecha del Reporte</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">25/04/2021</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="time-outline"></ion-icon>Hora: 08:00 Am</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">Estado: Finalizado</label>
+                    </div>
+                    <div class="cuacontent">
+                        <label class="cuatext"></label>
+                    </div>
+                </div>
             </div>
             <div class="grip item8">
-                <div class="reportegeneral"></div>
+                <div class="cuadro">
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="stats-chart-outline"></ion-icon>Reporte General</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>Fecha del Reporte</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext">25/04/2021</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="time-outline"></ion-icon>Hora: 08:00 Am</label>
+                    </div>
+
+                    <div class="cuacontent">
+                        <label class="cuatext"><ion-icon name="bar-chart-outline"></ion-icon>Estado: Finalizado</label>
+                    </div>
+                    <div class="cuacontent">
+                        <label class="cuatext"></label>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
