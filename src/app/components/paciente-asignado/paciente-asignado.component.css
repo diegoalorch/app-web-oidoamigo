@@ -316,6 +316,10 @@ ion-icon {
     border-radius: 8px;
 }
 
+.cuadro:hover {
+    background: #e6e4f7;
+}
+
 .cuatext {
     font-size: 25px;
     font-family: 'Concert One', cursive;
@@ -328,6 +332,7 @@ ion-icon {
     justify-content: center;
     margin-bottom: 20px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .cuacontent {
@@ -408,6 +413,7 @@ ion-icon {
     font-weight: 900;
     top: 0px;
     position: relative;
+    cursor: pointer;
 }
 
 .img1 {
@@ -435,6 +441,7 @@ ion-icon {
     font-weight: 600;
     top: 13px;
     position: relative;
+    cursor: pointer;
 }
 
 .cuatext4 {
@@ -443,6 +450,7 @@ ion-icon {
     font-weight: 600;
     top: 102px;
     position: relative;
+    cursor: pointer;
 }
 
 .img2 {

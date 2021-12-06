@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="grip item2">
-                <div class="cuadro">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
 
                     <div class="img1">
                         <img src="../../../assets/img/sesiones.png" alt="">
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="grip item3">
-                <div class="cuadro">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
                     <div class="img1">
                         <img src="../../../assets/img/sesiones.png" alt="">
                     </div>
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="grip item4">
-                <div class="cuadro">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
                     <div class="img1">
                         <img src="../../../assets/img/sesiones.png" alt="">
                     </div>
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="grip item5">
-                <div class="cuadro">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
                     <div class="img2">
                         <img src="../../../assets/img/reportelogo.png" alt="">
                     </div>
@@ -135,7 +135,7 @@
                 </div>
             </div>
             <div class="grip item6">
-                <div class="cuadro">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
                     <div class="img2">
                         <img src="../../../assets/img/reportelogo.png" alt="">
                     </div>
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div class="grip item7">
-                <div class="cuadro">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
                     <div class="img2">
                         <img src="../../../assets/img/reportelogo.png" alt="">
                     </div>
@@ -177,7 +177,7 @@
                 </div>
             </div>
             <div class="grip item8">
-                <div class="cuadro">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
                     <div class="img2">
                         <img src="../../../assets/img/reportelogo.png" alt="">
                     </div>
@@ -195,6 +195,53 @@
                             <label class="cuatext"></label>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Datos del Paciente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Nombres Completos</label>
+                            <input type="text" class="form-control" id="inputEmail4" name="nombre" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Apellidos Completos</label>
+                            <input type="text" class="form-control" id="inputPassword4" name="apellido" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Número de Celular</label>
+                            <input type="text" class="form-control" id="inputPassword4" name="telefonos" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Pais</label>
+                            <input type="text" class="form-control" id="inputPassword4" name="paises" disabled>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Consulta</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="consulta" disabled></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Psicólogo Asignado</label>
+                            <input type="text" class="form-control" id="inputPassword4" name="paises" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Número del Psicólogo</label>
+                            <input type="text" class="form-control" id="inputPassword4" name="paises" disabled>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
