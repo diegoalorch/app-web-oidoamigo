@@ -25,25 +25,26 @@
                     </div>
                 </div>
             </div>
-            <div class="grip item2">
+
+            <div *ngFor="let sesion1 of ses1" class="perfilpaciente2" class="grip item2">
                 <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
 
                     <div class="img1">
                         <img src="../../../assets/img/sesiones.png" alt="">
                     </div>
                     <div class="absolute">
-                        <a href="https://meet.google.com/" target="_blank">
+                        <a href={{sesion1.link}} target="_blank">
                             <div class="cuacontent1">
                                 <label class="cuatext1">Sesión 1</label>
                             </div>
                         </a>
 
                         <div class="cuacontent">
-                            <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>25/04/2021</label>
+                            <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>{{sesion1.fecha}}</label>
                         </div>
 
                         <div class="cuacontent">
-                            <label class="cuatext"><ion-icon name="time-outline"></ion-icon>08:00 Am</label>
+                            <label class="cuatext"><ion-icon name="time-outline"></ion-icon>{{sesion1.hora}}</label>
                         </div>
 
                         <div class="cuacontent">
@@ -55,24 +56,24 @@
                     </div>
                 </div>
             </div>
-            <div class="grip item3">
-                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
+            <div *ngFor="let sesion2 of ses2" class="grip item3">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal2">
                     <div class="img1">
                         <img src="../../../assets/img/sesiones.png" alt="">
                     </div>
                     <div class="absolute">
-                        <a href="https://meet.google.com/" target="_blank">
+                        <a href={{sesion2.link}} target="_blank">
                             <div class="cuacontent1">
                                 <label class="cuatext1">Sesión 2</label>
                             </div>
                         </a>
 
                         <div class="cuacontent">
-                            <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>25/04/2021</label>
+                            <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>{{sesion2.fecha}}</label>
                         </div>
 
                         <div class="cuacontent">
-                            <label class="cuatext"><ion-icon name="time-outline"></ion-icon>08:00 Am</label>
+                            <label class="cuatext"><ion-icon name="time-outline"></ion-icon>{{sesion2.hora}}</label>
                         </div>
 
                         <div class="cuacontent">
@@ -84,24 +85,24 @@
                     </div>
                 </div>
             </div>
-            <div class="grip item4">
-                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
+            <div *ngFor="let sesion3 of ses3" class="grip item4">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal3">
                     <div class="img1">
                         <img src="../../../assets/img/sesiones.png" alt="">
                     </div>
                     <div class="absolute">
-                        <a href="https://meet.google.com/" target="_blank">
+                        <a href={{sesion3.link}} target="_blank">
                             <div class="cuacontent1">
                                 <label class="cuatext1">Sesión 3</label>
                             </div>
                         </a>
 
                         <div class="cuacontent">
-                            <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>25/04/2021</label>
+                            <label class="cuatext"><ion-icon name="calendar-number-outline"></ion-icon>{{sesion3.fecha}}</label>
                         </div>
 
                         <div class="cuacontent">
-                            <label class="cuatext"><ion-icon name="time-outline"></ion-icon>08:00 Am</label>
+                            <label class="cuatext"><ion-icon name="time-outline"></ion-icon>{{sesion3.hora}}</label>
                         </div>
 
                         <div class="cuacontent">
@@ -114,7 +115,7 @@
                 </div>
             </div>
             <div class="grip item5">
-                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal4">
                     <div class="img2">
                         <img src="../../../assets/img/reportelogo.png" alt="">
                     </div>
@@ -135,7 +136,7 @@
                 </div>
             </div>
             <div class="grip item6">
-                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal5">
                     <div class="img2">
                         <img src="../../../assets/img/reportelogo.png" alt="">
                     </div>
@@ -156,7 +157,7 @@
                 </div>
             </div>
             <div class="grip item7">
-                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal6">
                     <div class="img2">
                         <img src="../../../assets/img/reportelogo.png" alt="">
                     </div>
@@ -177,7 +178,7 @@
                 </div>
             </div>
             <div class="grip item8">
-                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal1">
+                <div class="cuadro" data-bs-toggle="modal" data-bs-target="#modal7">
                     <div class="img2">
                         <img src="../../../assets/img/reportelogo.png" alt="">
                     </div>
@@ -200,50 +201,365 @@
         </div>
     </div>
 
+
     <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title" id="exampleModalLabel">Datos del Paciente</h1>
+                    <h1 class="modal-title" id="exampleModalLabel">Datos de la Sesion 1</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     </button>
                 </div>
                 <div class="modal-body">
                     <form class="row g-3">
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Nombres Completos</label>
-                            <input type="text" class="form-control" id="inputEmail4" name="nombre" disabled>
+                            <label for="inputEmail4" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="fecha" [(ngModel)]="sesion.fecha" name="fecha">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Apellidos Completos</label>
-                            <input type="text" class="form-control" id="inputPassword4" name="apellido" disabled>
+                            <label for="inputPassword4" class="form-label">Hora</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="sesion.hora" name="hora">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Número de Celular</label>
-                            <input type="text" class="form-control" id="inputPassword4" name="telefonos" disabled>
+                            
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Pais</label>
-                            <input type="text" class="form-control" id="inputPassword4" name="paises" disabled>
+                            
                         </div>
                         <div class="col-12">
-                            <label for="inputAddress" class="form-label">Consulta</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="consulta" disabled></textarea>
+                            <label for="inputAddress" class="form-label">Enlace</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="sesion.link" name="link">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Psicólogo Asignado</label>
-                            <input type="text" class="form-control" id="inputPassword4" name="paises" disabled>
+                            
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Número del Psicólogo</label>
-                            <input type="text" class="form-control" id="inputPassword4" name="paises" disabled>
+                           
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="createSesio1()">Guardar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Datos de la Sesion 2</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="fecha" [(ngModel)]="sesion.fecha" name="fecha">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Hora</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="sesion.hora" name="hora">
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Enlace</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="sesion.link" name="link">
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-md-6">
+                           
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="createSesio2()">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Datos de la Sesion 3</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="fecha" [(ngModel)]="sesion.fecha" name="fecha">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Hora</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="sesion.hora" name="hora">
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Enlace</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="sesion.link" name="link">
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-md-6">
+                           
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="createSesio3()">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Reporte Sesion 1</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Observaciones Generales</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="fecha" [(ngModel)]="reportes.obserg" name="fecha">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Antecedentes</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.ante" name="hora">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Problema Actual</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.problem" name="hora">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Acciones Realizadas</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.accreal" name="hora">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputAddress" class="form-label">Concluciones</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.conclu" name="link">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Recomendaciones/Tareas</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.recotare" name="link">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Medio</label>
+                            <select class="form-select" aria-label="Default select example" [(ngModel)]="reportes.idmedio" name="metodo">
+                                <option selected>Medio de Contacto</option>
+                                <option value="1">Llamada</option>
+                                <option value="2">Videollamada</option>
+                              </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.fecha" name="link">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="createReporte1()">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Reporte Sesion 2</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Observaciones Generales</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="fecha" [(ngModel)]="reportes.obserg" name="fecha">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Antecedentes</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.ante" name="hora">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Problema Actual</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.problem" name="hora">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Acciones Realizadas</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.accreal" name="hora">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputAddress" class="form-label">Concluciones</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.conclu" name="link">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Recomendaciones/Tareas</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.recotare" name="link">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Medio</label>
+                            <select class="form-select" aria-label="Default select example" [(ngModel)]="reportes.idmedio" name="metodo">
+                                <option selected>Medio de Contacto</option>
+                                <option value="1">Llamada</option>
+                                <option value="2">Videollamada</option>
+                              </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.fecha" name="link">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="createReporte2()">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Reporte Sesion 3</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Observaciones Generales</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="fecha" [(ngModel)]="reportes.obserg" name="fecha">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Antecedentes</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.ante" name="hora">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Problema Actual</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.problem" name="hora">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Acciones Realizadas</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.accreal" name="hora">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputAddress" class="form-label">Concluciones</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.conclu" name="link">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Recomendaciones/Tareas</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.recotare" name="link">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Medio</label>
+                            <select class="form-select" aria-label="Default select example" [(ngModel)]="reportes.idmedio" name="metodo">
+                                <option selected>Medio de Contacto</option>
+                                <option value="1">Llamada</option>
+                                <option value="2">Videollamada</option>
+                              </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.fecha" name="link">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="createReporte3()">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Reporte Final</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Observaciones Generales</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="fecha" [(ngModel)]="reportes.obserg" name="fecha">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Antecedentes</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.ante" name="hora">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Problema Actual</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.problem" name="hora">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Acciones Realizadas</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="hora" [(ngModel)]="reportes.accreal" name="hora">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputAddress" class="form-label">Concluciones</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.conclu" name="link">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Recomendaciones/Tareas</label>
+                            <input type="text" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.recotare" name="link">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Medio</label>
+                            <select class="form-select" aria-label="Default select example" [(ngModel)]="reportes.idmedio" name="metodo">
+                                <option selected>Medio de Contacto</option>
+                                <option value="1">Llamada</option>
+                                <option value="2">Videollamada</option>
+                              </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" aria-label="Names" aria-describedby="basic-addon1" id="link" [(ngModel)]="reportes.fecha" name="link">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="createReportef()">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

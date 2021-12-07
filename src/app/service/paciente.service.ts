@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Paciente } from '../model/paciente';
 import { Sesion } from '../model/sesion';
+import { Reportes } from '../model/reportes';
 
 @Injectable({
   providedIn: 'root'
@@ -46,8 +47,53 @@ export class PacienteService {
     return this.http.delete<Paciente>(this.url + '/eliminar-consulta/' + eliminar.idpaciente);
   } 
 
-   //  CREATE REGISTRO CONSULTA
+  // LISTAR DATOS DE LA SESION1
+  readsesion1(id:number) : Observable<Sesion[]>{
+    return this.http.get<Sesion[]>(this.url + '/sesion1/'+id);
+  }
+
+  // LISTAR DATOS DE LA SESION2
+  readsesion2(id:number) : Observable<Sesion[]>{
+    return this.http.get<Sesion[]>(this.url + '/sesion2/'+id);
+  }
+
+  // LISTAR DATOS DE LA SESION3
+  readsesion3(id:number) : Observable<Sesion[]>{
+    return this.http.get<Sesion[]>(this.url + '/sesion3/'+id);
+  }
+
+   //  CREATE SESION1
    createsesion1(ses : Sesion) {
-    return this.http.post<Sesion[]>(this.url+'/create-sesion1',Sesion);
+    return this.http.post<Sesion[]>(this.url+'/create-sesion1',ses);
+  }
+
+  //  CREATE SESION12
+  createsesion2(ses : Sesion) {
+    return this.http.post<Sesion[]>(this.url+'/create-sesion2',ses);
+  }
+
+  //  CREATE SESION3
+  createsesion3(ses : Sesion) {
+    return this.http.post<Sesion[]>(this.url+'/create-sesion3',ses);
+  }
+
+  //  CREATE REPORTE 1
+  createreporte1(rep : Reportes) {
+    return this.http.post<Reportes[]>(this.url+'/create-reporte1',rep);
+  }
+
+  //  CREATE REPORTE 2
+  createreporte2(rep : Reportes) {
+    return this.http.post<Reportes[]>(this.url+'/create-reporte1',rep);
+  }
+
+  //  CREATE REPORTE 3
+  createreporte3(rep : Reportes) {
+    return this.http.post<Reportes[]>(this.url+'/create-reporte1',rep);
+  }
+
+  //  CREATE REPORTE Final
+  createreportef(rep : Reportes) {
+    return this.http.post<Reportes[]>(this.url+'/create-reporte1',rep);
   }
 }
