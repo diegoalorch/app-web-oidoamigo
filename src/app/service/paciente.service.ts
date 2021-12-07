@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Paciente } from '../model/paciente';
+import { Sesion } from '../model/sesion';
 
 @Injectable({
   providedIn: 'root'
@@ -44,4 +45,9 @@ export class PacienteService {
   deleteConsulta(eliminar:Paciente){
     return this.http.delete<Paciente>(this.url + '/eliminar-consulta/' + eliminar.idpaciente);
   } 
+
+   //  CREATE REGISTRO CONSULTA
+   createsesion1(ses : Sesion) {
+    return this.http.post<Sesion[]>(this.url+'/create-sesion1',Sesion);
+  }
 }
