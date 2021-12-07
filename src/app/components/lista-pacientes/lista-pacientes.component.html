@@ -3,18 +3,34 @@
         <div class="row">
             <!--lista1-->
             <div class="col-sm lista1">
-                <div class="paasig">
-                    <b class="estilos1">Pacientes No Asignados</b>
+                <div class="paasig1">
+                    <div class="perfilagregar">
+                        <img src="../../../assets/img/noasignado.png">
+                    </div>
+                    <div class="letras">
+                        <b class="estilos1">Pacientes No</b><br>
+                        <b class="estilos1">Asignados</b>
+                    </div>
+
                 </div>
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nombres y Apellidos</th>
-                            <th scope="col">Telefono</th>
+                            <th scope="col" style="color: #7b1038;">N°</th>
+                            <th scope="col">
+                                <ion-icon name="person-outline" style="font-size: 22px; color: #7b1038; margin-right: 0px; top: 5px; position: relative;"></ion-icon>
+                                Nombres y Apellidos
+                            </th>
+                            <th scope="col">
+                                <ion-icon name="call-outline" style="font-size: 22px; color: #7b1038; margin-right: 0px; top: 5px; position: relative;"></ion-icon>
+                                Telefono
+                            </th>
                             <th scope="col" class="tabla2">Ver</th>
                             <th scope="col" class="tabla2">Asignar</th>
-                            <th scope="col" class="tabla2">Eliminar</th>
+                            <th scope="col" class="tabla2">
+                                <ion-icon name="close-circle-outline" style="font-size: 22px; color: #7b1038; margin-right: 0px; top: 5px; position: relative;"></ion-icon>
+                                Eliminar
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,9 +60,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
+                            <div class="documentologo">
+                                <img src="../../../assets/img/documentos.png">
+                            </div>
                             <h1 class="modal-title" id="exampleModalLabel">Datos del Paciente</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        </button>
+                            </button>
                         </div>
                         <div class="modal-body" *ngFor="let asig of listar_datos">
                             <form class="row g-3">
@@ -152,20 +171,33 @@
             <div class="col-sm lista2">
                 <!--lista2-->
                 <div class="paasig">
-                    <b class="estilos1">Pacientes Asignados</b>
+                    <div class="perfilagregar">
+                        <img src="../../../assets/img/asignado.png">
+                    </div>
+                    <div class="letras">
+                        <b class="estilos1">Pacientes</b><br>
+                        <b class="estilos1">Asignados</b>
+                    </div>
                 </div>
 
                 <div>
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nombres y Apellidos</th>
-                                <th scope="col">Telefono</th>
+                                <th scope="col" style="color: #7b1038;">N°</th>
+                                <th scope="col">
+                                    <ion-icon name="person-outline" style="font-size: 22px; color: #7b1038; margin-right: 0px; top: 5px; position: relative;"></ion-icon>
+                                    Nombres y Apellidos
+                                </th>
+                                <th scope="col">
+                                    Telefono
+                                </th>
                                 <th scope="col" class="tabla2">Ver</th>
                                 <th scope="col" class="tabla2">Derivar</th>
                                 <th scope="col" class="tabla2">Designar</th>
-                                <th scope="col" class="tabla2">Eliminar</th>
+                                <th scope="col" class="tabla2">
+                                    Eliminar
+                                </th>
                             </tr>
                         </thead>
                         <tbody>

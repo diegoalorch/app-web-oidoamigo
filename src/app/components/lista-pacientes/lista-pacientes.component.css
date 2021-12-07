@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 .btn-success,
 .btn-success:active,
 .btn-success:visited,
@@ -7,7 +11,7 @@
 }
 
 .todo {
-    top: -30px;
+    top: -42px;
     position: relative;
     height: 90%;
 }
@@ -49,14 +53,6 @@
     justify-content: center;
 }
 
-.estilos1 {
-    color: #005eac;
-    font-size: 40px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
-    text-align: center;
-}
-
 .tabla2 {
     text-align: center;
 }
@@ -88,4 +84,82 @@
         left: 0px;
         margin-top: 15px;
     }
+}
+
+.estilos1 {
+    color: #000000;
+    font-size: 40px;
+    font-weight: 700;
+    left: 20px;
+    font-family: 'Concert One', cursive;
+    position: relative;
+    align-items: center;
+    top: -5px;
+}
+
+.paasig {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: #efeefd;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.paasig1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: #efeefd;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.perfilagregar {
+    max-width: 140px;
+    height: 119px;
+}
+
+.documentologo {
+    width: 85px;
+    height: 85px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #640326;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.modal-title {
+    left: 10px;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    top: -10px;
+    color: white;
+}
+
+.btn-close {
+    background-color: white;
+    opacity: 70%;
+}
+
+.btn-close:hover {
+    background-color: white;
+    opacity: 100%;
 }

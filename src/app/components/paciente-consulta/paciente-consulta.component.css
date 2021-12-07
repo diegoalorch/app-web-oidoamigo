@@ -28,6 +28,10 @@
     background: #f2f2f2;
 }
 
+.imgsdiv {
+    position: absolute;
+}
+
 .contenedor {
     width: 390px;
     background: #fff;
