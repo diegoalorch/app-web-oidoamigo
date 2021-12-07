@@ -35,6 +35,42 @@ body {
     background: #f2f2f2;
 }
 
+.img1 {
+    position: absolute;
+    height: 315px;
+    display: flex;
+    justify-content: flex-start;
+    top: -1px;
+    left: -1px;
+}
+
+.img2 {
+    position: absolute;
+    height: 445px;
+    display: flex;
+    justify-content: flex-start;
+    bottom: -1px;
+    left: -1px;
+}
+
+.img3 {
+    position: absolute;
+    height: 315px;
+    display: flex;
+    justify-content: right;
+    right: -1px;
+    bottom: -1px;
+}
+
+.img4 {
+    position: absolute;
+    height: 445px;
+    display: flex;
+    justify-content: right;
+    right: -1px;
+    top: -1px;
+}
+
 .login-formulario {
     width: 390px;
     background: #fff;
@@ -46,6 +82,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 
 .form {

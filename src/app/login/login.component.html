@@ -9,6 +9,18 @@
 <body>
     <div class="pantalla">
         <div class="contenedor">
+            <div class="img1">
+                <img src="../../assets/img/izquierdasuperiorlogin.png">
+            </div>
+            <div class="img2">
+                <img src="../../assets/img/izquierdainferiorlogin.png">
+            </div>
+            <div class="img3">
+                <img src="../../assets/img/derechainferiorlogin2.png">
+            </div>
+            <div class="img4">
+                <img src="../../assets/img/derechasuperiorlogin2.png">
+            </div>
             <div class="login-formulario">
                 <form class="formulario-form validate-form">
 
@@ -28,16 +40,16 @@
 
                     <form>
                         <div class="input-box underline">
-                            <input type="text" [(ngModel)]="usuario.username" name="Username"  placeholder="Ingresa el Usuario" required>
+                            <input type="text" [(ngModel)]="usuario.username" name="Username" placeholder="Ingresa el Usuario" required>
                             <div class="underline"></div>
                             <!-- <div class="icon"><i class='bx bxs-user'></i></div> -->
                         </div>
                         <div class="input-box">
-                            <input type="password" [(ngModel)]="usuario.password" name="Password"  placeholder="Ingresa la Contraseña" required>
+                            <input type="password" [(ngModel)]="usuario.password" name="Password" placeholder="Ingresa la Contraseña" required>
                             <div class="underline"></div>
                             <!-- <div class="icon"><i class='bx bxs-lock-alt'></i></div> -->
                         </div>
-    
+
                         <br><br>
 
                         <button (click)="signIn()">

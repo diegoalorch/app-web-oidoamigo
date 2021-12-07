@@ -10,7 +10,6 @@
 }
 
 .principal {
-    padding: 8px;
     width: 100%;
     margin: 0 auto;
     min-height: 100vh;
@@ -19,17 +18,110 @@
 
 .contenedor1 {
     width: 100%;
-    min-height: 97.8vh;
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    padding: 7px;
-    background: #f2f2f2;
+    background: #F7F5FF;
 }
 
-.imgsdiv {
+.img1 {
     position: absolute;
+    height: 395px;
+    display: flex;
+    justify-content: flex-start;
+    top: -1px;
+    left: -1px;
+}
+
+.img2 {
+    position: absolute;
+    height: 395px;
+    display: flex;
+    justify-content: flex-start;
+    bottom: -1px;
+    left: -1px;
+}
+
+.img3 {
+    position: absolute;
+    height: 395px;
+    display: flex;
+    justify-content: flex-start;
+    left: -1px;
+}
+
+.img5-logo {
+    position: absolute;
+    height: 115px;
+    top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    left: 120px;
+}
+
+.img4 {
+    position: absolute;
+    height: 225px;
+    display: flex;
+    justify-content: right;
+    right: -1px;
+    bottom: -1px;
+}
+
+.img5 {
+    position: absolute;
+    height: 560px;
+    display: flex;
+    justify-content: right;
+    right: -1px;
+    top: -1px;
+}
+
+.img6 {
+    position: absolute;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    bottom: 20px;
+    left: 445px;
+    width: auto;
+}
+
+.img7 {
+    position: absolute;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    top: 165px;
+    left: 485px;
+}
+
+.img8 {
+    position: absolute;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+    left: 445px;
+}
+
+.img9 {
+    position: absolute;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    top: 40px;
+    left: 655px;
+}
+
+.img10 {
+    position: absolute;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    top: 140px;
+    left: 835px;
 }
 
 .contenedor {
@@ -43,6 +135,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 30px;
+    top: 14px;
 }
 
 .button-logearse {
